@@ -1,23 +1,23 @@
-window.scriptTag = document.createElement('script');
-scriptTag.src = chrome.runtime.getURL('eventHandler.js');
+window.scriptTag = document.createElement("script");
+scriptTag.src = chrome.runtime.getURL("eventHandler.js");
 scriptTag.type = "text/javascript";
 
 document.head.appendChild(scriptTag);
 
 function handler(event) {
-    if (event.source === window) {
-        if (event.data.action === 'prettifyWebApi') {
-            chrome.runtime.sendMessage(event.data);
-        } else if (event.data.action === 'openInWebApi') {
-            if (event.data.url.startsWith('https://')) {
-                window.open(event.data.url);
-            }
-        }
+  if (event.source === window) {
+    if (event.data.action === "prettifyWebApi") {
+      chrome.runtime.sendMessage(event.data);
+    } else if (event.data.action === "openInWebApi") {
+      if (event.data.url.startsWith("https://")) {
+        window.open(event.data.url);
+      }
     }
+  }
 }
 
 if (!window.initialized) {
-    window.addEventListener('message', handler);
+  window.addEventListener("message", handler);
 }
 
 window.initialized = true;

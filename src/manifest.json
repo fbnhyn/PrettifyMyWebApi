@@ -1,28 +1,21 @@
 {
-    "name": "PrettifyMyWebApi for Dynamics/Power Platform",
-    "version": "1.0.2.1",
-    "description": "Press to impress your coworkers!",
-    "manifest_version": 3,
-    "author": "Erik Donker",
-    "background": {
-        "service_worker": "background.js"
-    },
-    "action": {},
-    "permissions": [
-        "activeTab",
-        "scripting"
-    ],
-    "web_accessible_resources": [
-        {
-            "resources": [
-                "eventHandler.js"
-            ],
-            "matches": [
-                "<all_urls>"
-            ]
-        }
-    ],
-    "icons": {
-        "128": "icon128.png"
+  "name": "PrettifyMyWebApi for Dynamics/Power Platform",
+  "version": "1.0.2.1",
+  "description": "Press to impress your coworkers!",
+  "manifest_version": 3,
+  "author": "Erik Donker",
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {},
+  "permissions": ["activeTab", "scripting"],
+  "web_accessible_resources": [
+    {
+      "resources": ["eventHandler.js"],
+      "matches": ["<all_urls>"]
     }
+  ],
+  "icons": {
+    "128": "icon128.png"
+  }
 }
